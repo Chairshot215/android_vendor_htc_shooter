@@ -18,14 +18,14 @@
 
 # APPS
 PRODUCT_COPY_FILES += \
-    vendor/motorola/triumph/proprietary/HtcFMRadio.apk:system/app/HtcFMRadio.apk \
+    vendor/htc/shooter/proprietary/HtcFMRadio.apk:system/app/HtcFMRadio.apk \
 
 # EGL
 PRODUCT_COPY_FILES += \
-    vendor/motorola/triumph/proprietary/egl.cfg:system/lib/egl/egl.cfg \
-    vendor/motorola/triumph/proprietary/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-    vendor/motorola/triumph/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-    vendor/motorola/triumph/proprietary/libGLES_android.so:system/lib/egl/libGLES_android.so \
-    vendor/motorola/triumph/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-    vendor/motorola/triumph/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    vendor/motorola/triumph/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so
+    vendor/htc/shooter/proprietary/egl.cfg:system/lib/egl/egl.cfg \
+    vendor/htc/shooter/proprietary/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
+    vendor/htc/shooter/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
+    vendor/htc/shooter/proprietary/libGLES_android.so:system/lib/egl/libGLES_android.so \
+    vendor/htc/shooter/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
+    vendor/htc/shooter/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
+    vendor/htc/shooter/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so
