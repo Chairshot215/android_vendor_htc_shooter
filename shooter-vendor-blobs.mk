@@ -15,7 +15,6 @@
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
     vendor/htc/shooter/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \
-    vendor/htc/shooter/proprietary/libacdbloader.so:obj/lib/libacdbloader.so \
     vendor/htc/shooter/proprietary/libacdbmapper.so:obj/lib/libacdbmapper.so \
     vendor/htc/shooter/proprietary/libv8.so:obj/lib/libv8.so
 
@@ -26,8 +25,10 @@ PRODUCT_COPY_FILES += \
 # AUDIO
 PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/libaudioalsa.so:system/lib/libaudioalsa.so \
-    vendor/htc/shooter/proprietary/libacdbloader.so:system/lib/libacdbloader.so \
-    vendor/htc/shooter/proprietary/libacdbmapper.so:system/lib/libacdbmapper.so
+    vendor/htc/shooter/proprietary/libacdbmapper.so:system/lib/libacdbmapper.so \
+    vendor/htc/shooter/proprietary/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so \
+    vendor/htc/shooter/proprietary/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
+    vendor/htc/shooter/proprietary/audio_policy.default.so:system/lib/hw/audio_policy.default.so
 
 # EGL
 PRODUCT_COPY_FILES += \
