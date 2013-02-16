@@ -167,7 +167,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/mmcamera_test_main:/system/bin/mmcamera_test_main \
     vendor/htc/shooter/proprietary/mm-jps-enc-test:/system/bin/mm-jps-enc-test \
     vendor/htc/shooter/proprietary/mm-mpo-enc-test:/system/bin/mm-mpo-enc-test \
-vendor/htc/shooter/proprietary/mm-qcamera-main-testsuite-client:/system/bin/mm-qcamera-main-testsuite-client \
+    vendor/htc/shooter/proprietary/mm-qcamera-main-testsuite-client:/system/bin/mm-qcamera-main-testsuite-client \
     vendor/htc/shooter/proprietary/mm-qcamera-main-testsuite-client-awb:/system/bin/mm-qcamera-main-testsuite-client-awb \
     vendor/htc/shooter/proprietary/mm-qcamera-testsuite-client:/system/bin/mm-qcamera-testsuite-client \
     vendor/htc/shooter/proprietary/mm-qcamera-testsuite-client-awb:/system/bin/mm-qcamera-testsuite-client-awb \
