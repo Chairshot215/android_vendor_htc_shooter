@@ -16,21 +16,32 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \
-    vendor/htc/shooter/proprietary/camera.default.so:obj/lib/hw/camera.default.so \
     vendor/htc/shooter/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \
     vendor/htc/shooter/proprietary/libacdbmapper.so:obj/lib/libacdbmapper.so \
+    vendor/htc/shooter/proprietary/libcamera_client.so:obj/lib/libcamera_client.so \
+    vendor/htc/shooter/proprietary/camera.default.so:obj/lib/hw/camera.default.so \
     vendor/htc/shooter/proprietary/libv8.so:obj/lib/libv8.so
-    
+
+ 
+# Framework
+PRODUCT_COPY_FILES += \
+     vendor/htc/shooter/proprietary/HTCExtension.jar:system/framework/HTCExtension.jar \
+     vendor/htc/shooter/proprietary/semc_audioeffectif.jar:system/framework/semc_audioeffectif.jar \
+     vendor/htc/shooter/proprietary/com.orange.authentication.simcard.jar:system/framework/com.orange.authentication.simcard.jar\
+     vendor/htc/shooter/proprietary/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
+     vendor/htc/shooter/proprietary/com.discretix.drm.api.jar:system/framework/com.discretix.drm.api.jar \
+     vendor/htc/shooter/proprietary/modemwarmup.jar:system/framework/modemwarmup.jar \
+     vendor/htc/shooter/proprietary/com.htc.android.bluetooth.jar:system/framework/com.htc.android.bluetooth.jar
+
+   
 # AUDIO
 PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/libacdbmapper.so:system/lib/libacdbmapper.so \
     vendor/htc/shooter/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \
     vendor/htc/shooter/proprietary/libaudioalsa.so:system/lib/libaudioalsa.so \
     vendor/htc/shooter/proprietary/libaudcal.so:system/lib/libaudcal.so \
-    vendor/htc/shooter/proprietary/libacdbmapper.so:system/lib/libacdbmapper.so \
     vendor/htc/shooter/proprietary/libbeatscorehtc.so:system/lib/libbeatscorehtc.so \
     vendor/htc/shooter/proprietary/libsrscorehtc.so:system/lib/libsrscorehtc.so \
-    vendor/htc/shooter/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
     vendor/htc/shooter/proprietary/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so \
     vendor/htc/shooter/proprietary/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
     vendor/htc/shooter/proprietary/audio_policy.default.so:system/lib/hw/audio_policy.default.so
@@ -68,8 +79,38 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
     vendor/htc/shooter/proprietary/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
+
 # BIN
 PRODUCT_COPY_FILES += \
+    vendor/htc/shooter/proprietary/make_ext4fs:/system/bin/make_ext4fs \
+    vendor/htc/shooter/proprietary/resize2fs:/system/bin/resize2fs \
+    vendor/htc/shooter/proprietary/e2fsck:/system/bin/e2fsck \
+    vendor/htc/shooter/proprietary/mke2fs:/system/bin/mke2fs \
+    vendor/htc/shooter/proprietary/tune2fs:/system/bin/tune2fs \
+    vendor/htc/shooter/proprietary/sensorservice:/system/bin/sensorservice \
+    vendor/htc/shooter/proprietary/zchgd:/system/bin/zchgd \
+    vendor/htc/shooter/proprietary/sdcard:/system/bin/sdcard \
+    vendor/htc/shooter/proprietary/sdptool:/system/bin/sdptool \
+    vendor/htc/shooter/proprietary/keypress:/system/bin/keypress \
+    vendor/htc/shooter/proprietary/vold:/system/bin/vold \
+    vendor/htc/shooter/proprietary/netcfg.mod.so:/system/bin/netcfg.mod.so \
+    vendor/htc/shooter/proprietary/netcfg:/system/bin/netcfg \
+    vendor/htc/shooter/proprietary/load-modem.sh:/system/bin/load-modem.sh \
+    vendor/htc/shooter/proprietary/keystore:/system/bin/keystore \
+    vendor/htc/shooter/proprietary/drmserver:/system/bin/drmserver \
+    vendor/htc/shooter/proprietary/dnsmasq:/system/bin/dnsmasq \
+    vendor/htc/shooter/proprietary/htcfs:/system/bin/htcfs \
+    vendor/htc/shooter/proprietary/netcfg:/system/bin/netcfg \
+    vendor/htc/shooter/proprietary/mtpd:/system/bin/mtpd \
+    vendor/htc/shooter/proprietary/btld:/system/bin/btld \
+    vendor/htc/shooter/proprietary/dhcpcd:/system/bin/dhcpcd \
+    vendor/htc/shooter/proprietary/dbus-daemon:/system/bin/dbus-daemon \
+    vendor/htc/shooter/proprietary/iptables:/system/bin/iptables \
+    vendor/htc/shooter/proprietary/ip6tables:/system/bin/ip6tables \
+    vendor/htc/shooter/proprietary/ip:/system/bin/ip \
+    vendor/htc/shooter/proprietary/ipd:/system/bin/ipd \
+    vendor/htc/shooter/proprietary/bluetoothd:/system/bin/bluetoothd \
+    vendor/htc/shooter/proprietary/hciattach:/system/bin/hciattach \
     vendor/htc/shooter/proprietary/charging:/system/bin/charging \
     vendor/htc/shooter/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \
     vendor/htc/shooter/proprietary/htcbatt:/system/bin/htcbatt \
@@ -78,7 +119,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/netmgrd:/system/bin/netmgrd \
     vendor/htc/shooter/proprietary/qmuxd:/system/bin/qmuxd \
     vendor/htc/shooter/proprietary/thermald:system/bin/thermald \
-    vendor/htc/shooter/proprietary/wireless_modem:system/bin/wireless_modem \
     vendor/htc/shooter/proprietary/wireless_modem:system/xbin/wireless_modem \
     vendor/htc/shooter/proprietary/logcat2:/system/bin/logcat2 \
     vendor/htc/shooter/proprietary/sound8x60:/system/bin/sound8x60 \
@@ -90,8 +130,23 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/udhcpd:/system/bin/udhcpd \
     vendor/htc/shooter/proprietary/rmt_storage:/system/bin/rmt_storage
 
-# CAMERA
+# wireless_modem in the Sprint Evo 3D Rom appears in both Bin & Xbin. This is not the case with the Evo V 4g so unsure at this point if the below entry is needed. 
+#    vendor/htc/shooter/proprietary/wireless_modem:system/bin/wireless_modem \
+
+# Libs (Testing)
 PRODUCT_COPY_FILES += \
+     vendor/htc/shooter/proprietary/libchromatix_qs_s5k4e1_video.so:/system/lib/libchromatix_qs_s5k4e1_video.so \
+     vendor/htc/shooter/proprietary/libchromatix_qs_s5k4e1_preview.so:/system/lib/libchromatix_qs_s5k4e1_preview.so \
+     vendor/htc/shooter/proprietary/libcapsjava.so:/system/lib/libcapsjava.so 
+
+#    vendor/htc/shooter/proprietary/libdl.so:/system/lib/libdl.so \
+#    vendor/htc/shooter/proprietary/libbinder.so:/system/lib/libbinder.so \
+#    vendor/htc/shooter/proprietary/libcutils.so:/system/lib/libcutils.so 
+
+# CAMERA (Lib)
+PRODUCT_COPY_FILES += \
+    vendor/htc/shooter/proprietary/libcameraLN.so:/system/lib/libcameraLN.so \
+    vendor/htc/shooter/proprietary/libcamera_client.so:/system/lib/libcamera_client.so \
     vendor/htc/shooter/proprietary/libcamerapp.so:/system/lib/libcamerapp.so \
     vendor/htc/shooter/proprietary/libcameraSP.so:/system/lib/libcameraSP.so \
     vendor/htc/shooter/proprietary/libcameraface.so:/system/lib/libcameraface.so \
@@ -102,6 +157,23 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \
     vendor/htc/shooter/proprietary/libmmjps.so:/system/lib/libmmjps.so \
     vendor/htc/shooter/proprietary/libmmjpeg2.so:/system/lib/libmmjpeg2.so
+
+# CAMERA (Bin) MM
+PRODUCT_COPY_FILES += \
+        vendor/htc/shooter/proprietary/cam_ins_spmo:/system/bin/cam_ins_spmo \
+    vendor/htc/shooter/proprietary/awb_camera:/system/bin/awb_camera \
+    vendor/htc/shooter/proprietary/awb_camera_main:/system/bin/awb_camera_main \
+    vendor/htc/shooter/proprietary/mmcamera_test:/system/bin/mmcamera_test \
+    vendor/htc/shooter/proprietary/mmcamera_test_main:/system/bin/mmcamera_test_main \
+    vendor/htc/shooter/proprietary/mm-jps-enc-test:/system/bin/mm-jps-enc-test \
+    vendor/htc/shooter/proprietary/mm-mpo-enc-test:/system/bin/mm-mpo-enc-test \
+vendor/htc/shooter/proprietary/mm-qcamera-main-testsuite-client:/system/bin/mm-qcamera-main-testsuite-client \
+    vendor/htc/shooter/proprietary/mm-qcamera-main-testsuite-client-awb:/system/bin/mm-qcamera-main-testsuite-client-awb \
+    vendor/htc/shooter/proprietary/mm-qcamera-testsuite-client:/system/bin/mm-qcamera-testsuite-client \
+    vendor/htc/shooter/proprietary/mm-qcamera-testsuite-client-awb:/system/bin/mm-qcamera-testsuite-client-awb \
+    vendor/htc/shooter/proprietary/mm-venc-omx-test720p:/system/bin/mm-venc-omx-test720p \
+    vendor/htc/shooter/proprietary/mm-video-encdrv-test:/system/bin/mm-video-encdrv-test 
+
 
 # EGL
 PRODUCT_COPY_FILES += \
@@ -142,6 +214,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
     vendor/htc/shooter/proprietary/libmm-omxcore.so:/system/lib/libmm-omxcore.so \
     vendor/htc/shooter/proprietary/libmpl.so:/system/lib/libmpl.so \
+    vendor/htc/shooter/proprietary/libmpl_jni.so:/system/lib/libmpl_jni.so \
     vendor/htc/shooter/proprietary/libmllite.so:/system/lib/libmllite.so \
     vendor/htc/shooter/proprietary/libmlplatform.so:/system/lib/libmlplatform.so \
     vendor/htc/shooter/proprietary/libOlaEngine.so:/system/lib/libOlaEngine.so \
@@ -169,11 +242,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ## WiMAX
 PRODUCT_COPY_FILES += \
+    vendor/htc/shooter/proprietary/libwimaxjni.so:system/lib/libwimaxjni.so \
     vendor/htc/shooter/proprietary/libcrypto.so:system/lib/libcrypto.so \
     vendor/htc/shooter/proprietary/libdmtree.so:system/lib/libdmtree.so \
     vendor/htc/shooter/proprietary/sequansd:system/bin/sequansd \
     vendor/htc/shooter/proprietary/wimax.jar:system/framework/wimax.jar \
     vendor/htc/shooter/proprietary/wimaxDumpKmsg:system/bin/wimaxDumpKmsg \
+    vendor/htc/shooter/proprietary/wimax_baud_hack.so:system/bin/wimax_baud_hack.so \
     vendor/htc/shooter/proprietary/wimaxDumpLogcat:system/bin/wimaxDumpLogcat \
     vendor/htc/shooter/proprietary/setWiMAXPropDaemond:system/bin/setWiMAXPropDaemond \
     vendor/htc/shooter/proprietary/wimax_mtd:system/bin/wimax_mtd \
